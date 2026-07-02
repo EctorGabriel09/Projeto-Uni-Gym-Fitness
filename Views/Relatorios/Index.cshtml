@@ -1,0 +1,96 @@
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Relatórios";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="container">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Relatórios</h2>
+        <p class="text-muted">
+            Indicadores gerais da Uni Gym Fitness.
+        </p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow text-center h-100">
+                <div class="card-body">
+                    <h1>👥</h1>
+                    <h5>Usuários</h5>
+                    <h3 class="fw-bold text-warning">@ViewBag.TotalUsuarios</h3>
+                    <p>Total de usuários cadastrados</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow text-center h-100">
+                <div class="card-body">
+                    <h1>🎓</h1>
+                    <h5>Alunos</h5>
+                    <h3 class="fw-bold text-warning">@ViewBag.TotalAlunos</h3>
+                    <p>Usuários do tipo aluno</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow text-center h-100">
+                <div class="card-body">
+                    <h1>👨‍💼</h1>
+                    <h5>Administradores</h5>
+                    <h3 class="fw-bold text-warning">@ViewBag.TotalAdministradores</h3>
+                    <p>Usuários administradores</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow text-center h-100">
+                <div class="card-body">
+                    <h1>💳</h1>
+                    <h5>Planos</h5>
+                    <h3 class="fw-bold text-warning">@ViewBag.TotalPlanos</h3>
+                    <p>Planos cadastrados</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow text-center h-100">
+                <div class="card-body">
+                    <h1>🏋️</h1>
+                    <h5>Produtos</h5>
+                    <h3 class="fw-bold text-warning">@ViewBag.TotalProdutos</h3>
+                    <p>Produtos cadastrados</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow text-center h-100">
+                <div class="card-body">
+                    <h1>📦</h1>
+                    <h5>Estoque</h5>
+                    <h3 class="fw-bold text-warning">@ViewBag.TotalEstoque</h3>
+                    <p>Total de itens em estoque</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card shadow mt-3">
+        <div class="card-body text-center">
+            <h4 class="fw-bold">Valor médio dos planos</h4>
+            <h2 class="text-warning fw-bold">
+                @(((decimal)ViewBag.ValorMedioPlanos).ToString("C", new CultureInfo("pt-BR")))
+            </h2>
+        </div>
+    </div>
+
+</div>

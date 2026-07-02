@@ -25,77 +25,55 @@
     <div class="row">
 
         <div class="col-md-3 mb-4">
-
-            <a asp-controller="Usuarios"
-               asp-action="Index"
-               class="text-decoration-none text-dark">
-
+            <a asp-controller="Usuarios" asp-action="Index" class="text-decoration-none text-dark">
                 <div class="card shadow text-center h-100">
-
                     <div class="card-body">
-
                         <h1>👤</h1>
                         <h5>Usuários</h5>
                         <h3 class="fw-bold text-warning">@ViewBag.TotalUsuarios</h3>
                         <p>Usuários cadastrados</p>
-
                     </div>
-
                 </div>
-
             </a>
-
         </div>
 
         <div class="col-md-3 mb-4">
-
-            <div class="card shadow text-center h-100">
-
-                <div class="card-body">
-
-                    <h1>💳</h1>
-                    <h5>Planos</h5>
-                    <h3 class="fw-bold text-warning">Em breve</h3>
-                    <p>Cadastro de planos</p>
-
+            <a asp-controller="Planos" asp-action="Index" class="text-decoration-none text-dark">
+                <div class="card shadow text-center h-100">
+                    <div class="card-body">
+                        <h1>💳</h1>
+                        <h5>Planos</h5>
+                        <h3 class="fw-bold text-warning">@ViewBag.TotalPlanos</h3>
+                        <p>Planos cadastrados</p>
+                    </div>
                 </div>
-
-            </div>
-
+            </a>
         </div>
 
         <div class="col-md-3 mb-4">
-
-            <div class="card shadow text-center h-100">
-
-                <div class="card-body">
-
-                    <h1>🏋️</h1>
-                    <h5>Produtos</h5>
-                    <h3 class="fw-bold text-warning">Em breve</h3>
-                    <p>Cadastro de produtos</p>
-
+            <a asp-controller="Produtos" asp-action="Index" class="text-decoration-none text-dark">
+                <div class="card shadow text-center h-100">
+                    <div class="card-body">
+                        <h1>🏋️</h1>
+                        <h5>Produtos</h5>
+                        <h3 class="fw-bold text-warning">@ViewBag.TotalProdutos</h3>
+                        <p>Produtos cadastrados</p>
+                    </div>
                 </div>
-
-            </div>
-
+            </a>
         </div>
 
         <div class="col-md-3 mb-4">
-
-            <div class="card shadow text-center h-100">
-
-                <div class="card-body">
-
-                    <h1>📊</h1>
-                    <h5>Relatórios</h5>
-                    <h3 class="fw-bold text-warning">Em breve</h3>
-                    <p>Dashboard analítico</p>
-
+            <a asp-controller="Relatorios" asp-action="Index" class="text-decoration-none text-dark">
+                <div class="card shadow text-center h-100">
+                    <div class="card-body">
+                        <h1>📊</h1>
+                        <h5>Relatórios</h5>
+                        <h3 class="fw-bold text-warning">Ver</h3>
+                        <p>Dashboard analítico</p>
+                    </div>
                 </div>
-
-            </div>
-
+            </a>
         </div>
 
     </div>

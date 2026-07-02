@@ -1,0 +1,67 @@
+@model IEnumerable<UniGymFitness.Models.Plano>
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Planos";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold">Planos</h2>
+            <p class="text-muted">Gerencie os planos da Uni Gym Fitness.</p>
+        </div>
+
+        <a asp-controller="Planos" asp-action="Criar" class="btn btn-warning fw-bold">
+            + Novo Plano
+        </a>
+    </div>
+
+    <table class="table table-hover table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <th>Benefícios</th>
+                <th width="200">Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var plano in Model)
+        {
+            <tr>
+                <td>@plano.Nome</td>
+
+                <td>
+                    @plano.Preco.ToString("C", new CultureInfo("pt-BR"))
+                </td>
+
+                <td>@plano.Descricao</td>
+                <td>@plano.Beneficios</td>
+
+                <td>
+                    <a asp-controller="Planos"
+                       asp-action="Editar"
+                       asp-route-id="@plano.Id"
+                       class="btn btn-primary btn-sm">
+                        Editar
+                    </a>
+
+                    <a asp-controller="Planos"
+                       asp-action="Excluir"
+                       asp-route-id="@plano.Id"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Tem certeza que deseja excluir este plano?');">
+                        Excluir
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>

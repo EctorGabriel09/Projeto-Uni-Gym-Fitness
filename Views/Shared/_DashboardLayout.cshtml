@@ -21,11 +21,38 @@
             </a>
 
             <nav class="dashboard-menu">
-                <a asp-controller="Dashboard" asp-action="Index">Dashboard</a>
-                <a href="#">Usuários</a>
-                <a href="#">Planos</a>
-                <a href="#">Produtos</a>
-                <a asp-controller="Account" asp-action="Login" class="dashboard-sair">Sair</a>
+
+                <a asp-controller="Dashboard"
+                   asp-action="Index">
+                    Dashboard
+                </a>
+
+                <a asp-controller="Usuarios"
+                   asp-action="Index">
+                    Usuários
+                </a>
+
+                <a asp-controller="Planos"
+                   asp-action="Index">
+                    Planos
+                </a>
+
+                <a asp-controller="Produtos"
+                   asp-action="Index">
+                    Produtos
+                </a>
+
+                <a asp-controller="Relatorios"
+                   asp-action="Index">
+                    Relatórios
+                </a>
+
+                <a asp-controller="Account"
+                   asp-action="Logout"
+                   class="dashboard-sair">
+                    Sair
+                </a>
+
             </nav>
 
         </div>
